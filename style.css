@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background: #F1ECD4;
+    height: 100%;
+}
+#moustache {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #000;
+    width: 100px;
+    height: 80px;
+    margin-left: -50px;
+}
+#moustache::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 0;
+    border-top: 40px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid #000;
+    border-bottom: 40px solid #000;
+}
+#moustache::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-top: 40px solid transparent;
+    border-left: 10px solid #000;
+    border-right: 10px solid transparent;
+    border-bottom: 40px solid #000;
+}
+#hair {
+    background: #000;
+    width: 400px;
+    height: 200px;
+    top: 20%;
+    left: 50%;
+    margin-left: -200px;
+    position: absolute;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+}
+#hair::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    border-top: 90px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 90px solid #F1ECD4;
+    border-right: 60px solid #F1ECD4;
+    top: 20px;
+}
+#hair::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    border-top: 90px solid transparent;
+    border-left: 140px solid #F1ECD4;
+    border-bottom: 90px solid #F1ECD4;
+    border-right: 140px solid transparent;
+    top: 20px;
+}
