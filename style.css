@@ -4,21 +4,35 @@
 }
 
 html {
-    min-height: 100%;
+    height: 100%;
 }
 
 body {
     background: #F1ECD4;
-    height: 100%;
+    min-height: 100%;
+    padding: 20px;
+}
+#face {
+    max-width: 400px;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 0;
+}
+#inner-face {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: absolute;
+    overflow: hidden;
 }
 #moustache {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    bottom: 0;
+    left: 37.5%;
     background: #000;
-    width: 100px;
-    height: 80px;
-    margin-left: -50px;
+    width: 25%;
+    height: 20%;
 }
 #moustache::before {
     content: "";
@@ -42,32 +56,33 @@ body {
 }
 #hair {
     background: #000;
-    width: 400px;
-    height: 200px;
-    top: 20%;
-    left: 50%;
-    margin-left: -200px;
+    width: 100%;
+    height: 50%;
     position: absolute;
-    border-top-left-radius: 200px;
-    border-top-right-radius: 200px;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
 }
 #hair::before {
-    position: absolute;
     content: "";
+    background-image: linear-gradient(123deg, transparent 50%, #f1ecd4 50%);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    height: 90%;
+    width: 30%;
+    position: absolute;
+    bottom: 0;
     left: 0;
-    border-top: 90px solid transparent;
-    border-left: 60px solid transparent;
-    border-bottom: 90px solid #F1ECD4;
-    border-right: 60px solid #F1ECD4;
-    top: 20px;
 }
 #hair::after {
-    position: absolute;
     content: "";
-    right: 0;
-    border-top: 90px solid transparent;
-    border-left: 140px solid #F1ECD4;
-    border-bottom: 90px solid #F1ECD4;
-    border-right: 140px solid transparent;
-    top: 20px;
+    background-image: linear-gradient(-147deg, transparent 50%, #f1ecd4 50%);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    height: 90%;
+    width: 70%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
 }
